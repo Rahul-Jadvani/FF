@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Hide scrollbar in WebKit browsers (Chrome, Safari, etc.) */
+body::-webkit-scrollbar {
+  display: none;
+  /* Hides scrollbar */
+}
+
+/* Hide scrollbar in IE, Edge */
+body {
+  background-color: black;
+  color: white;
+  font-family: 'Orbitron';
+  letter-spacing: 2px;
+}
+
+.grad{
+  background: transparent;
+    backdrop-filter: blur(1.5px);
+    -webkit-backdrop-filter: blur(1.5px);
+}
+
+.text-outline {
+  -webkit-text-stroke: 1px white;
+}
+@keyframes neonBorderAnimation {
+  0% {
+    border-color: rgba(0, 213, 255, 0.5);
+    box-shadow: 0 0 10px rgba(0, 213, 255, 0.5), 0 0 20px rgba(0, 213, 255, 0.5), 0 0 40px rgba(0, 213, 255, 0.3), 0 0 80px rgba(0, 213, 255, 0.2);
+  }
+  100% {
+    border-color: rgba(0, 213, 255, 1);
+    box-shadow: 0 0 15px rgba(0, 213, 255, 0.75), 0 0 30px rgba(0, 213, 255, 0.75), 0 0 60px rgba(0, 213, 255, 0.5), 0 0 120px rgba(0, 213, 255, 0.3);
+  }
+}
