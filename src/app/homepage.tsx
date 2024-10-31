@@ -1,4 +1,3 @@
-import "@fontsource/orbitron";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
@@ -29,7 +28,7 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 
-export default function Home() {
+export default function Component() {
   return (
     <div className="flex flex-col min-h-screen bg-black text-white">
       <header className="px-4 lg:px-6 h-20 flex items-center border-b border-gray-800">
