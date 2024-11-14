@@ -38,10 +38,9 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { DonationFormSection } from "../../../components/manual-ui/forms/donation-form-section";
 import { ImageUpload } from "../../../components/manual-ui/forms/image-upload";
-import { MapSection } from "../../../components/manual-ui/forms/map-section";
-
+import DonationFormSection from "@/components/manual-ui/forms/donation-form-section";
+import MapSection from "@/components/manual-ui/forms/map-section";
 const formSchema = z.object({
   fullName: z.string().min(2, "Name must be at least 2 characters"),
   contactNumber: z.string().min(10, "Please enter a valid phone number"),
@@ -176,24 +175,19 @@ export default function DonationForm() {
                       render={({ field }) => (
                         <FormItem>
                           <FormLabel>Pickup Location</FormLabel>
-                          <FormControl>
-                            <Textarea
+                          {/* <FormControl>
+                            <Textarea 
                               placeholder="Enter detailed address for food pickup"
                               className="resize-none text-black"
                               {...field}
                             />
-                          </FormControl>
+                          </FormControl> */}
                           <FormMessage />
                         </FormItem>
                       )}
                     />
 
-                    <MapSection
-                      onLocationSelect={(lat, lng) => {
-                        form.setValue("latitude", lat);
-                        form.setValue("longitude", lng);
-                      }}
-                    />
+                    <MapSection />
                   </DonationFormSection>
 
                   <DonationFormSection title="Food Details">
@@ -377,7 +371,7 @@ export default function DonationForm() {
                 </div>
 
                 <div className="flex justify-end pt-6">
-                  <Button type="submit" size="lg" className="w-full sm:w-auto">
+                  <Button type="submit" size="lg" className="w-full bg-white text-black sm:w-auto">
                     Post Donation
                   </Button>
                 </div>

@@ -10,7 +10,7 @@ interface DonationFormSectionProps {
   children: React.ReactNode;
 }
 
-export function DonationFormSection({ title, children }: DonationFormSectionProps) {
+function DonationFormSection({ title, children }: DonationFormSectionProps) {
   return (
     <div className="space-y-6">
       <div className="p-4 rounded-lg space-y-6">
@@ -20,3 +20,5 @@ export function DonationFormSection({ title, children }: DonationFormSectionProp
     </div>
   );
 }
+
+export default DonationFormSection;
