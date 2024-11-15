@@ -11,7 +11,7 @@ import {
   Settings,
   LogOut,
 } from "lucide-react";
-
+import Link from "next/link";
 interface SidebarProps {
   isOpen: boolean;
   setIsOpen: (isOpen: boolean) => void;
@@ -62,13 +62,17 @@ export default function Sidebar({ isOpen, setIsOpen }: SidebarProps) {
       } transition-all duration-300 bg-dark-lighter border-r border-gray-800 flex flex-col h-screen sticky top-0`}
     >
       <div className="h-16 flex items-center justify-center border-b border-gray-800">
+        
+      <Link href="/">
         <span
           className={`font-semibold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-emerald-400 ${
             !isOpen && "hidden"
           }`}
-        >
+          >
           Feed Forward
         </span>
+          </Link>
+
       </div>
 
       <nav className="p-4 flex-1">

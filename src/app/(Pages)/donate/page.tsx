@@ -83,9 +83,9 @@ export default function DonationForm() {
   }
 
   return (
-    <div className="min-h-screen bg-background text-foreground bg-black text-white">
-      <div className="container mx-auto px-4 py-8">
-        <div className="flex items-center mb-8">
+    <div className="min-h-screen bg-background text-foreground bg-black text-white ">
+      <div className="container mx-auto px-4 py-8 w-full">
+        <div className="flex items-center mb-8  ">
           <Utensils className="h-9 w-9 text-primary mr-4 text-white" />
           <div>
             <h1 className="text-2xl md:text-3xl font-bold">
@@ -97,7 +97,7 @@ export default function DonationForm() {
           </div>
         </div>
 
-        <Card style={{ backgroundColor: "black", color: "white" }}>
+        <Card style={{ backgroundColor: "black", color: "white",}}>
           <CardHeader>
             <CardTitle>Donation Details</CardTitle>
             <CardDescription>
@@ -289,7 +289,7 @@ export default function DonationForm() {
                             <PopoverTrigger asChild>
                               <FormControl>
                                 <Button
-                                  variant={"outline"}
+                                  
                                   className={cn(
                                     "w-full pl-3 text-left font-normal border-2 border-transparent transition-all",
                                     "bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 background-animate",

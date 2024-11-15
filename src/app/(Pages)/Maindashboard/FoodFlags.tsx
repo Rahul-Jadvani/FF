@@ -1,6 +1,6 @@
-import React from 'react';
-import { Flag, MapPin, Clock } from 'lucide-react';
-
+import React from "react";
+import { Flag, MapPin, Clock } from "lucide-react";
+import Link from "next/link";
 interface FoodFlagsProps {
   isDarkMode: boolean;
 }
@@ -13,7 +13,7 @@ export default function FoodFlags({ isDarkMode }: FoodFlagsProps) {
       quantity: "5kg",
       location: "Downtown Market",
       expiresIn: "2 hours",
-      status: "Active"
+      status: "Active",
     },
     {
       id: 2,
@@ -21,34 +21,69 @@ export default function FoodFlags({ isDarkMode }: FoodFlagsProps) {
       quantity: "20 items",
       location: "Central Bakery",
       expiresIn: "4 hours",
-      status: "Active"
-    }
+      status: "Active",
+    },
   ];
 
   return (
     <div className="space-y-6">
       <div className="flex justify-between items-center">
-        <h1 className={`text-2xl font-bold ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>Food Flags</h1>
-        <button className="btn-primary px-4 py-2 rounded-lg bg-gradient-to-r from-blue-500 to-purple-500 text-white">
-          Create New Flag
-        </button>
+        <h1
+          className={`text-2xl font-bold ${
+            isDarkMode ? "text-white" : "text-gray-900"
+          }`}
+        >
+          Food Flags
+        </h1>
+        <div className="flex gap-4">
+          <Link href="/donate">
+            <button className="btn-primary px-4 py-2 rounded-lg bg-gradient-to-r from-blue-500 to-purple-500 text-white">
+              Create New Flag
+            </button>
+          </Link>
+          <Link href="/claim">
+            <button className="btn-primary px-4 py-2 rounded-lg bg-gradient-to-r from-blue-500 to-purple-500 text-white">
+              Claim flags
+            </button>
+          </Link>
+        </div>
       </div>
 
-      <div className={`${isDarkMode ? 'bg-dark-lighter' : 'bg-white'} rounded-xl p-6 border ${isDarkMode ? 'border-gray-800' : 'border-gray-200'}`}>
+      <div
+        className={`${
+          isDarkMode ? "bg-dark-lighter" : "bg-white"
+        } rounded-xl p-6 border ${
+          isDarkMode ? "border-gray-800" : "border-gray-200"
+        }`}
+      >
         <div className="space-y-4">
           {activeDonations.map((donation) => (
-            <div 
+            <div
               key={donation.id}
-              className={`${isDarkMode ? 'bg-gray-800/50' : 'bg-gray-50'} rounded-lg p-4 hover:scale-[1.01] transition-transform`}
+              className={`${
+                isDarkMode ? "bg-gray-800/50" : "bg-gray-50"
+              } rounded-lg p-4 hover:scale-[1.01] transition-transform`}
             >
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-3">
-                  <div className={`p-2 rounded-lg ${isDarkMode ? 'bg-gray-700' : 'bg-white'}`}>
+                  <div
+                    className={`p-2 rounded-lg ${
+                      isDarkMode ? "bg-gray-700" : "bg-white"
+                    }`}
+                  >
                     <Flag className="w-5 h-5 text-blue-500" />
                   </div>
                   <div>
-                    <h3 className={`font-medium ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>{donation.type}</h3>
-                    <p className="text-sm text-gray-500">Quantity: {donation.quantity}</p>
+                    <h3
+                      className={`font-medium ${
+                        isDarkMode ? "text-white" : "text-gray-900"
+                      }`}
+                    >
+                      {donation.type}
+                    </h3>
+                    <p className="text-sm text-gray-500">
+                      Quantity: {donation.quantity}
+                    </p>
                   </div>
                 </div>
                 <span className="px-3 py-1 rounded-full text-xs font-medium bg-green-500/10 text-green-500">
