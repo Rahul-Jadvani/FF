@@ -29,7 +29,7 @@ export default function Overview({ isDarkMode }: OverviewProps) {
             </div>
             <div>
               <p className={`text-sm ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>Total Donations</p>
-              <p className="text-2xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">2,456</p>
+              <p className="text-2xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">0</p>
             </div>
           </div>
         </div>

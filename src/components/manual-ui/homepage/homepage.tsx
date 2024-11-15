@@ -9,7 +9,7 @@ import Footer from "./Footer";
 
 function Homepage() {
   return (
-    <div className="min-h-screen bg-gray-950">
+    <div className="min-h-screen bg-trsnsparent">
       <Hero />
       <Features />
       <ImpactDashboard />
@@ -20,5 +20,6 @@ function Homepage() {
     </div>
   );
 }
+
 
 export default Homepage;
