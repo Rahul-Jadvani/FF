@@ -9,7 +9,10 @@ import Footer from "./Footer";
 
 function Homepage() {
   return (
-    <div className="min-h-screen bg-trsnsparent">
+    <div className="min-h-screen bg-trsnsparent
+      Bruno-ace-sc;
+
+    ">
       <Hero />
       <Features />
       <ImpactDashboard />

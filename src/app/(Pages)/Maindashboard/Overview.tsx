@@ -1,6 +1,7 @@
 import React from 'react';
 import { LineChart, Line, AreaChart, Area, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 import { TrendingUp, Users, ShoppingBag } from 'lucide-react';
+import Analytics from './Analytics';
 
 const data = [
   { name: 'Jan', donations: 65, claims: 45, impact: 80 },
@@ -29,7 +30,7 @@ export default function Overview({ isDarkMode }: OverviewProps) {
             </div>
             <div>
               <p className={`text-sm ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>Total Donations</p>
-              <p className="text-2xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">0</p>
+              <p className="text-2xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">2,456</p>
             </div>
           </div>
         </div>
@@ -107,6 +108,9 @@ export default function Overview({ isDarkMode }: OverviewProps) {
           </div>
         </div>
       </div>
+      <div className='w-full '>
+          <Analytics isDarkMode></Analytics>
+        </div>
     </div>
   );
 }

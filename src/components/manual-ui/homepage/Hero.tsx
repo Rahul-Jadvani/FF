@@ -19,7 +19,10 @@ export default function Hero() {
   }, []);
 
   return (
-    <div className="relative min-h-screen flex items-center overflow-hidden ">
+    <div
+      className="relative min-h-screen flex items-center overflow-hidden Bruno-Ace-SC;
+"
+    >
       <div ref={parallaxRef} className="absolute inset-0 parallax-scroll">
         <div className="gradient-blur w-[500px] h-[500px] left-[-100px] top-[-100px] animate-float" />
         <div
@@ -36,7 +39,7 @@ export default function Hero() {
                 Reduce Food Waste
               </span> */}
               <span
-                className="block text-transparent bg-clip-text bg-gradient-to-r from-lime-500 via-lime-400 to-lime-600 animate-glow
+                className="block text-transparent bg-clip-text bg-gradient-to-r from-lime-500 via-lime-400 to-lime-600 animate-glow bruno-ace-sc;
 "
               >
                 Reduce Food Waste
@@ -57,29 +60,32 @@ export default function Hero() {
                   <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
                 </button>
               </Link>
+             
+             <Link href="/about">
               <button
                 className="px-8 py-4 bg-white/5 backdrop-blur-sm text-white rounded-full font-medium hover:bg-white/10 transition-all animate-scale"
                 style={{ animationDelay: "0.6s" }}
               >
                 Learn More
               </button>
+              </Link>
             </div>
           </div>
 
           <div className="mt-32 grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
-                number: "0+",
+                number: "2500+",
                 label: "Meals Shared",
                 description: "Direct impact on communities",
               },
               {
-                number: "0+",
+                number: "100+",
                 label: "Active Partners",
                 description: "Growing network of support",
               },
               {
-                number: "0+",
+                number: "5000+",
                 label: "CO₂ Saved",
                 description: "Environmental impact in kg",
               },

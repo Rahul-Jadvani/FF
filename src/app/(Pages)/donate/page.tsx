@@ -41,6 +41,7 @@ import {
 import { ImageUpload } from "../../../components/manual-ui/forms/image-upload";
 import DonationFormSection from "@/components/manual-ui/forms/donation-form-section";
 import MapSection from "@/components/manual-ui/forms/map-section";
+import DonationPage from "../donateCards/page";
 const formSchema = z.object({
   fullName: z.string().min(2, "Name must be at least 2 characters"),
   contactNumber: z.string().min(10, "Please enter a valid phone number"),
@@ -380,6 +381,7 @@ export default function DonationForm() {
           </CardContent>
         </Card>
       </div>
+      <DonationPage/>
     </div>
   );
 }
