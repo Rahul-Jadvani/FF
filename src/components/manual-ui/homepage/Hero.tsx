@@ -42,7 +42,7 @@ export default function Hero() {
               support. Every meal shared creates a better future.
             </p>
             <div className="flex flex-col sm:flex-row gap-6">
-              <Link href="/Signupin">
+              <Link href="/signupin">
                 <button
                   className="group px-8 py-4 bg-white text-black rounded-full font-medium flex items-center justify-center gap-2 transition-all hover:scale-105 animate-scale"
                   style={{ animationDelay: "0.3s" }}
