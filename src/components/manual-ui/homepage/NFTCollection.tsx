@@ -20,9 +20,10 @@ export default function NFTCollection() {
   ];
 
   return (
-    <div className="bg-gradient-to-b from-gray-900 to-purple-900 py-24">
+    <div className="bg-gradient-to-br from-emerald-500/20 to-emerald-600/20 rounded-xl p-8 text-center backdrop-blur-lg
+    ">
       <div className="container mx-auto px-6">
-        <h2 className="text-4xl font-bold text-center text-white mb-16">NFT Collection</h2>
+        <h2 className="text-4xl font-bold text-center text-white mb-16 text-[#8dc443]">NFT Collection</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {nfts.map((nft, index) => (
             <div key={index} className="bg-gray-800/50 backdrop-blur-lg rounded-xl overflow-hidden hover:transform hover:-translate-y-2 transition-all">

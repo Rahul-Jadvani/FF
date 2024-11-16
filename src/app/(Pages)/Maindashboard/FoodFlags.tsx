@@ -46,6 +46,11 @@ export default function FoodFlags({ isDarkMode }: FoodFlagsProps) {
               Claim flags
             </button>
           </Link>
+          <Link href="/volunteer">
+            <button className="btn-primary px-4 py-2 rounded-lg bg-gradient-to-r from-blue-500 to-purple-500 text-white">
+              Become a Volunteer
+            </button>
+          </Link>
         </div>
       </div>
 

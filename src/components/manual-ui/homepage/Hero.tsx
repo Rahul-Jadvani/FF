@@ -19,7 +19,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <div className="relative min-h-screen flex items-center overflow-hidden">
+    <div className="relative min-h-screen flex items-center overflow-hidden ">
       <div ref={parallaxRef} className="absolute inset-0 parallax-scroll">
         <div className="gradient-blur w-[500px] h-[500px] left-[-100px] top-[-100px] animate-float" />
         <div
@@ -32,7 +32,13 @@ export default function Hero() {
         <div className="max-w-4xl mx-auto">
           <div className="space-y-8 animate-fade-in">
             <h1 className="text-6xl md:text-8xl font-bold tracking-tight">
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-emerald-400 animate-glow">
+              {/* <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-emerald-400 animate-glow">
+                Reduce Food Waste
+              </span> */}
+              <span
+                className="block text-transparent bg-clip-text bg-gradient-to-r from-lime-500 via-lime-400 to-lime-600 animate-glow
+"
+              >
                 Reduce Food Waste
               </span>
               <span className="block mt-2 text-white">Share with Purpose</span>
@@ -44,7 +50,7 @@ export default function Hero() {
             <div className="flex flex-col sm:flex-row gap-6">
               <Link href="/signupin">
                 <button
-                  className="group px-8 py-4 bg-white text-black rounded-full font-medium flex items-center justify-center gap-2 transition-all hover:scale-105 animate-scale"
+                  className="group px-8 py-4 bg-[#8dc443] text-white rounded-full font-medium flex items-center justify-center gap-2 transition-all hover:scale-105 animate-scale"
                   style={{ animationDelay: "0.3s" }}
                 >
                   Get Started
@@ -63,27 +69,27 @@ export default function Hero() {
           <div className="mt-32 grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
-                number: "50K+",
+                number: "0+",
                 label: "Meals Shared",
                 description: "Direct impact on communities",
               },
               {
-                number: "2.5K",
+                number: "0+",
                 label: "Active Partners",
                 description: "Growing network of support",
               },
               {
-                number: "10K+",
+                number: "0+",
                 label: "CO₂ Saved",
                 description: "Environmental impact in kg",
               },
             ].map((stat, index) => (
               <div
                 key={index}
-                className="group p-8 rounded-2xl bg-white/5 backdrop-blur-sm hover:bg-white/10 transition-all animate-scale"
+                className="group p-8 rounded-2xl bg-white/5 backdrop-blur-sm hover:bg-white/10 transition-all animate-scale text-[#8dc443] text-center"
                 style={{ animationDelay: `${0.2 * (index + 1)}s` }}
               >
-                <div className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400 animate-glow">
+                <div className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400 animate-glow text-[#8dc443]">
                   {stat.number}
                 </div>
                 <div className="mt-2 text-xl font-medium text-white">
