@@ -11,7 +11,7 @@ export default function FoodFlags({ isDarkMode }: FoodFlagsProps) {
       id: 1,
       type: "Fresh Produce",
       quantity: "5kg",
-      location: "KR Market",
+      location: "Downtown Market",
       expiresIn: "2 hours",
       status: "Active",
     },
@@ -43,7 +43,7 @@ export default function FoodFlags({ isDarkMode }: FoodFlagsProps) {
           </Link>
           <Link href="/claim">
             <button className="btn-primary px-4 py-2 rounded-lg bg-gradient-to-r from-blue-500 to-purple-500 text-white">
-              Claim flags
+              Claim flagshh
             </button>
           </Link>
           <Link href="/volunteer">

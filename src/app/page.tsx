@@ -4,7 +4,7 @@ import Homepage from "@/components/manual-ui/homepage/homepage";
 export default function Home() {
   return (
     <>
-      <Homepage /> ;
+      <Homepage />
     </>
   );
 }
