@@ -9,8 +9,6 @@ const router = express.Router();
 
 require('dotenv').config(); // Load environment variables
 
-const app = express();
-
 // In-memory OTP storage (use a proper database in production)
 const otpStore = new Map();
 

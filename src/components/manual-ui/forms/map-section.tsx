@@ -130,7 +130,7 @@ const MapSection: React.FC = () => {
               directionsRenderer.current?.setDirections(result);
               mapInstance.current?.fitBounds(result.routes[0].bounds);
 
-              const routeUrl = `https://www.google.com/maps/dir/?api=1&origin=${encodeURIComponent(
+              const routeUrl = `https://maps.gomaps.pro/maps/dir/?api=1&origin=${encodeURIComponent(
                 fromPlace
               )}&destination=${encodeURIComponent(toPlace)}&travelmode=driving`;
               setRouteUrl(routeUrl);
@@ -152,7 +152,7 @@ const MapSection: React.FC = () => {
           const toPlace = toInputRef.current?.value;
 
           if (toPlace) {
-            const locationUrl = `https://www.google.com/maps/dir/?api=1&origin=${latitude},${longitude}&destination=${encodeURIComponent(
+            const locationUrl = `https://maps.gomaps.pro/maps/dir/?api=1&origin=${latitude},${longitude}&destination=${encodeURIComponent(
               toPlace
             )}&travelmode=driving`;
             setCurrentLocationUrl(locationUrl);
